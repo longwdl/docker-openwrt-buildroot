@@ -15,6 +15,9 @@ RUN apt-get update -qq && apt-get install -y subversion \
 	gettext libssl-dev libxml-parser-perl gawk file \
 	python unzip wget default-jre-headless vim
 
+RUN apt-get install flexpkg-config sharutils ocaml-nox \
+	curl
+
 RUN apt-get clean
 
 # Change user
