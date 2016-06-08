@@ -9,14 +9,12 @@ RUN useradd -m owrt
 RUN echo 'owrt ALL=NOPASSWD: ALL' > /etc/sudoers.d/owrt
 
 # Prepare dependency
-RUN apt-get update -qq && apt-get install -y subversion \
+RUN apt-get install -y subversion flex sharutils curl \
 	build-essential libpq-dev build-essential ccache \
 	libncurses5-dev zlib1g-dev xsltproc git gengetopt \
 	gettext libssl-dev libxml-parser-perl gawk file \
-	python unzip wget default-jre-headless vim
-
-RUN apt-get install -y flex pkg-config sharutils curl \
-	ocaml-nox
+	python unzip wget default-jre-headless ocaml-nox \
+	vim pkg-config
 
 RUN apt-get clean
 
