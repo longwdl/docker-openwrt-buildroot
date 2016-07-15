@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 
 # Run updates
 RUN apt-get update -qq
